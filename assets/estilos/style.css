@@ -1,293 +1,325 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-primaria: #132040fe;
-    --color-secundaria: #09305a;
-    --color-texto: #ffffff;
+  --color-primaria: #132040fe;
+  --color-secundaria: #09305a;
+  --color-texto: #ffffff;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-secundaria);
-    color: var(--color-texto);
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-secundaria);
+  color: var(--color-texto);
 }
 
 /*Mobile first */
 @media (max-width: 768px) {
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        background-color: var(--color-primaria);
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-primaria);
+  }
 
-        .titulo {
-            font-size: 24px;
-        }
+  .header .logoTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 
-        .logo {
-            width: 70px;
-            border-radius: 50%;
-        }
+  .header .logoTitulo .titulo path {
+    fill: rgba(255, 255, 255, 0.521);
+    stroke: #ffffff;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: desenhar 5s linear forwards;
+  }
 
-        .menuIcon {
-            width: 30px;
-            cursor: pointer;
-        }
+  @keyframes desenhar {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
 
-        .navBar {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--color-texto);
-            padding: 10px;
-        }
+  .header .logoTitulo .logo {
+    width: 50px;
+    border-radius: 50%;
+  }
 
-        .navLink {
-            color: var(--color-primaria);
-            text-decoration: none;
-            margin: 10px 0;
-            font-size: 18px;
-        }
+  .header .menuIcon {
+    width: 20px;
+    cursor: pointer;
+  }
 
+  .header .navBar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-texto);
+    padding: 10px;
+  }
+
+  .header .navLink {
+    color: var(--color-primaria);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  main .home {
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url("/assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .home .homeTitulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.177);
+  }
+
+  main .home .homeDescricao {
+    line-height: 1.5;
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  main .home .homeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-primaria);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  main .home .buttonWhats {
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  main .home .buttonWhatsImg {
+    animation: pulsar 1.9s infinite;
+
+    width: 60px;
+    border-radius: 30%;
+    padding: 5px;
+  }
+
+  @keyframes pulsar {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 150, 0.7);
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        .home {
-            background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url('/assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg') no-repeat center center/cover;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-
-            .homeTitulo {
-                font-size: 28px;
-                margin-bottom: 20px;
-                text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.177);
-            }
-
-            .homeDescricao {
-                line-height: 1.5;
-                font-size: 18px;
-                max-width: 600px;
-            }
-
-            .homeButton {
-                margin-top: 20px;
-                padding: 10px 20px;
-                background-color: var(--color-primaria);
-                color: var(--color-texto);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 16px;
-            }
-        }
-
-        .sobre {
-            background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url('/assets/imagens/ ') no-repeat center center/cover;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            line-height: 1.5;
-
-            .sobreTitulo {
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
-
-            .sobreDescricao {
-                font-size: 18px;
-                max-width: 600px;
-            }
-        }
-
-        .servicos {
-            background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-
-            .servicosTitulo {
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
-
-            .servicosLista {
-                width: 100%;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 20px;
-
-                .servicosItem {
-
-                    padding: 20px;
-                    border: 1px solid var(--color-primaria);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    transition: transform 0.3s ease;
-
-                }
-
-                #diagnostico {
-                    grid-column: 1 / -1;
-                }
-            }
-        }
-        .servicosPrestados {
-             background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            overflow: hidden;
-            .servicosPrestadosTitulo {
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
-    
-            .servicosPrestadosItem {
-                width: 100%;
-
-                .servicosPrestadosItemTitulo {
-                    font-size: 20px;
-                    margin-bottom: 30px;
-                }
-                  .carrosselServicosPrestados{
-                
-
-
-                 .servicosPrestadosItemImagem {
-                    width: 100px;
-                    border-radius: 5px;
-                }
-            }
-               
-            }}
-            .contato {
-                background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 20px;
-
-                .contatoTitulo {
-                    font-size: 20px;
-                    margin-bottom: 20px;
-                }
-
-                .contatoDescricao {
-                    font-size: 16px;
-                    line-height: 1.5;
-                    text-align: justify;
-                    max-width: 600px;
-                    margin-bottom: 20px;
-                }
-
-               .contatoLista{
-                list-style: none;
-                width: 100%;
-                text-align: justify;
-
-                li a{
-                    text-decoration: none;
-                    color: var(--color-texto);
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    margin-bottom: 5px;
-
-                    img{
-                        width: 30px;
-                    }
-                    .email{
-                        background-color: #ffffffac;
-                        padding: 2px;
-                        border-radius: 5px;
-                        width: 25px;
-                        margin-left: 2px;
-                    }
-                   
-                }
-                 #endereco{
-                    font-size: 14px;
-    
-                    }
-               }
-               .horarioAtendimento{
-                h4{
-                    color: #de0606b2;
-                }
-                margin-top: 10px;
-               }
-
-    }}
-    footer{
-       background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
-       padding: 15px;
-       text-align: center;
-       font-size: 14px;
-       border-top: 1px solid;
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 15px rgba(0, 255, 150, 0);
     }
+
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 150, 0);
+    }
+  }
+
+  main .sobre {
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url("/assets/imagens/ ") no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.5;
+  }
+
+  main .sobre .sobreTitulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  main .sobre .sobreDescricao {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  main .servicos {
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .servicos .servicosTitulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  main .servicos .servicosLista {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  main .servicos .servicosLista .servicosItem {
+    padding: 20px;
+    border: 1px solid var(--color-primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  main .servicos .servicosLista #diagnostico {
+    grid-column: 1 / -1;
+  }
+
+  main .servicosPrestados {
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  main .servicosPrestados .servicosPrestadosTitulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  main .servicosPrestados .servicosPrestadosItem {
+    width: 100%;
+  }
+
+  main .servicosPrestados .servicosPrestadosItem .servicosPrestadosItemTitulo {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  main .servicosPrestados .servicosPrestadosItem .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  main .contato {
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .contato .contatoTitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoDescricao {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoLista {
+    list-style: none;
+    width: 100%;
+    text-align: justify;
+  }
+
+  main .contato .contatoLista li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  main .contato .contatoLista li a img {
+    width: 30px;
+  }
+
+  main .contato .contatoLista li a .email {
+    background-color: #ffffffac;
+    padding: 2px;
+    border-radius: 5px;
+    width: 25px;
+    margin-left: 2px;
+  }
+
+  main .contato .contatoLista #endereco {
+    font-size: 14px;
+  }
+
+  main .contato .horarioAtendimento {
+    margin-top: 10px;
+  }
+
+  main .contato .horarioAtendimento h4 {
+    color: #de0606b2;
+  }
+
+  footer {
+    background-color: #05182E;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .carrosselServicosPrestados img {
-    width: 100px;
+  width: 100px;
 }
