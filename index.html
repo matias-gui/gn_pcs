@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GN PCS</title>
     <link rel="stylesheet" href="/assets/estilos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -19,12 +20,14 @@
                     fill="white" />
             </svg>
         </section>
-        <img src="/assets/imagens/icons8-menu.svg" alt="Menu" class="menuIcon">
+        <button class="buttonMenu"><img src="/assets/imagens/icons8-menu.svg" alt="Menu" class="menuIcon"></button>
         <section class="navBar">
-            <a href="/index.html" class="navLink">Home</a>
-            <a href="/sobre.html" class="navLink">Sobre</a>
-            <a href="/servicos.html" class="navLink">Serviços</a>
-            <a href="/contato.html" class="navLink">Contato</a>
+            <button class="buttonFecharMenu"><img src="/assets/imagens/fechar.png" alt="icone fechar"
+                    class="imgFecharMenu"></button>
+            <a href="/index.html" class="navLink"> <i class="fa-solid fa-house"></i> Home</a>
+            <a href="/sobre.html" class="navLink"> <i class="fa-solid fa-circle-info"></i> Sobre</a>
+            <a href="/servicos.html" class="navLink"> <i class="fa-solid fa-microchip" id="iconeServico"></i> Serviços</a>
+            <a href="/contato.html" class="navLink"> <i class="fa-solid fa-envelope" id="iconeContato" ></i> Contato</a>
         </section>
     </header>
     <main class="main">
@@ -47,11 +50,11 @@
         <section class="servicos">
             <h2 class="servicosTitulo">Nossos Serviços</h2>
             <ul class="servicosLista">
-                <li class="servicosItem">Limpeza de Pcs e Notebooks</li>
-                <li class="servicosItem">Manutenção de Hardware</li>
-                <li class="servicosItem">Montagem Personalizada de Pcs</li>
-                <li class="servicosItem">Atualização de Software</li>
-                <li class="servicosItem" id="diagnostico">Diagnóstico e Reparos</li>
+                <li class="servicosItem"> <i class="fa-solid fa-fan"></i> Limpeza de Pcs e Notebooks</li>
+                <li class="servicosItem"> <i class="fa-solid fa-screwdriver-wrench"></i> Manutenção de Hardware</li>
+                <li class="servicosItem"> <i class="fa-solid fa-computer"></i> Montagem Personalizada de Pcs</li>
+                <li class="servicosItem"> <i class="fa-solid fa-gear"></i> Atualização de Software</li>
+                <li class="servicosItem" id="diagnostico"> <i class="fa-solid fa-stethoscope"></i> Diagnóstico e Reparos</li>
             </ul>
         </section>
         <section class="servicosPrestados">
