@@ -63,24 +63,75 @@ body {
     border-radius: 50%;
   }
 
-  .header .menuIcon {
+  .header .buttonMenu {
+    background-color: transparent;
+    border: none;
+  }
+
+  .header .buttonMenu .menuIcon {
     width: 20px;
     cursor: pointer;
   }
-
-  .header .navBar {
-    display: none;
-    flex-direction: column;
+  .header .buttonFecharMenu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: var(--color-texto);
-    padding: 10px;
+    width: 60px;
+    height: 60px;
+    width: 10%;
+    border: none;
+    background-color: transparent;
+  
+   
   }
 
+  .header .buttonFecharMenu .imgFecharMenu{
+    width: 90%;
+    
+  }
+
+
+  .header .navBar {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    font-weight: 700;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fbf6f6;
+    clip-path: circle(0% at 100% 0%);
+    gap: 50px;
+    z-index: 998;
+  }
+ 
+
   .header .navLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
     color: var(--color-primaria);
     text-decoration: none;
     margin: 10px 0;
     font-size: 18px;
+  }
+  .header .navLink i{
+    color: var(--color-secundaria);
+    font-size:22px;
+  }
+  #iconeServico, #iconeContato{
+    margin-left: 25px;
   }
 
   main {
@@ -214,11 +265,16 @@ body {
     padding: 20px;
     border: 1px solid var(--color-primaria);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    margin: 12px 0;
+    padding: 20px;
   }
+  main .servicos .servicosLista .servicosItem i{
+    color:var(--color-secundaria);
+    margin-right:10px;
+    font-size:20px;
+}
 
   main .servicos .servicosLista #diagnostico {
     grid-column: 1 / -1;
