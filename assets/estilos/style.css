@@ -8,6 +8,7 @@
   --color-primaria: #132040fe;
   --color-secundaria: #09305a;
   --color-texto: #ffffff;
+  --color-titulo: #7ABDE6;
 }
 
 html {
@@ -169,7 +170,7 @@ body {
 
   main .home .homeDescricao {
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 14px;
     max-width: 600px;
   }
 
@@ -224,19 +225,30 @@ body {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: start;
     padding: 20px;
     line-height: 1.5;
+   
   }
 
   main .sobre .sobreTitulo {
+    border-bottom: 1px solid var(--color-secundaria);
+    border-right: 1px solid var(--color-secundaria);
+    border:1px solid var(--color-secundaria) ;
+    border-left: none;
+    padding-right: 15px;
+    border-radius: 5px;
     font-size: 28px;
     margin-bottom: 20px;
   }
+  main .sobre .sobreTitulo .tituloQuemSomos{
+    color: var(--color-titulo);
+
+  }
 
   main .sobre .sobreDescricao {
-    font-size: 18px;
+    text-align: justify;
+    font-size: 14px;
     max-width: 600px;
   }
 
@@ -256,6 +268,7 @@ body {
 
   main .servicos .servicosLista {
     width: 100%;
+    font-size: 14px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
@@ -322,7 +335,7 @@ body {
   }
 
   main .contato .contatoDescricao {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     text-align: justify;
     max-width: 600px;
@@ -341,7 +354,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+  
   }
 
   main .contato .contatoLista li a img {
@@ -361,15 +375,21 @@ body {
   }
 
   main .contato .horarioAtendimento {
-    margin-top: 10px;
+    width: 80%;
+    border: 1px solid var(--color-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    line-height: 1.5;
   }
 
   main .contato .horarioAtendimento h4 {
-    color: #de0606b2;
+    color: #fff;
+    margin: 15px;
   }
 
   footer {
-    background-color: #05182E;
+    background-color: #05182D;
     padding: 15px;
     text-align: center;
     font-size: 14px;
