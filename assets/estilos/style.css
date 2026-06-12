@@ -113,7 +113,10 @@ body {
     gap: 50px;
     z-index: 998;
   }
- 
+   .header .navBar .buttonLinkMenu {
+    border: none;
+    background-color: transparent;
+   }
 
   .header .navLink {
     display: flex;
@@ -241,7 +244,7 @@ body {
     font-size: 28px;
     margin-bottom: 20px;
   }
-  main .sobre .sobreTitulo .tituloQuemSomos{
+  main span{
     color: var(--color-titulo);
 
   }
@@ -253,17 +256,24 @@ body {
   }
 
   main .servicos {
-    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     text-align: center;
     padding: 20px;
+    color: #000;
   }
 
   main .servicos .servicosTitulo {
+     border-bottom: 1px solid var(--color-secundaria);
+    border-right: 1px solid var(--color-secundaria);
+    border:1px solid var(--color-secundaria) ;
+    border-left: none;
+    border-radius: 5px;
     font-size: 28px;
     margin-bottom: 20px;
+    padding: 5px 15px 5px;
   }
 
   main .servicos .servicosLista {
