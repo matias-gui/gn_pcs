@@ -321,8 +321,13 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     overflow: hidden;
+    width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
   }
 
   main .servicosPrestados .servicosPrestadosTitulo {
@@ -330,20 +335,22 @@ body {
     margin-bottom: 20px;
   }
 
-  main .servicosPrestados .servicosPrestadosItem {
-    width: 100%;
-  }
 
-  main .servicosPrestados .servicosPrestadosItem .servicosPrestadosItemTitulo {
-    font-size: 20px;
-    margin-bottom: 30px;
+  main .servicosPrestados .carrosselServicosPrestados  {
+        display:flex;
+        width: 100%;
+        transition: transform .7s ease-in-out;
   }
+   main .servicosPrestados .carrosselServicosPrestados .servicosPrestadosItemImagem {
+        width: 100%;
+        object-fit:cover;
+        border-radius: 15px;
+        box-sizing: border-box;
+        
+        
 
-  main .servicosPrestados .servicosPrestadosItem .carrosselServicosPrestados .servicosPrestadosItemImagem {
-    width: 100px;
-    border-radius: 5px;
-  }
-
+    
+   }
   main .contato {
     background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
     display: flex;
