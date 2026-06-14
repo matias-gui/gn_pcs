@@ -111,7 +111,6 @@ body {
     background-color: #fbf6f6;
     clip-path: circle(0% at 100% 0%);
     gap: 50px;
-    z-index: 998;
   }
    .header .navBar .buttonLinkMenu {
     border: none;
@@ -129,6 +128,7 @@ body {
     text-decoration: none;
     margin: 10px 0;
     font-size: 18px;
+    z-index: 998;
   }
   .header .navLink i{
     color: var(--color-secundaria);
@@ -289,12 +289,12 @@ body {
   }
 
   main .servicos .servicosLista .servicosItem {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 20px;
     border: 1px solid var(--color-primaria);
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 12px 0;
     padding: 20px;
     border-radius: 5px;
@@ -306,7 +306,6 @@ body {
     box-shadow: 0 0 15px rgba(102, 179, 242, 0.151)
   }
   main .servicos .servicosLista .servicosItem i{
-    position: absolute;
     top: 10px;
     color:var(--color-secundaria);
     margin-right:10px;
@@ -327,7 +326,7 @@ body {
     overflow: hidden;
     width: 100%;
     gap: 20px;
-    box-sizing: border-box;
+
   }
 
   main .servicosPrestados .servicosPrestadosTitulo {
@@ -338,18 +337,15 @@ body {
 
   main .servicosPrestados .carrosselServicosPrestados  {
         display:flex;
-        width: 100%;
+        width: 70%;
+        gap: 70px;
         transition: transform .7s ease-in-out;
   }
    main .servicosPrestados .carrosselServicosPrestados .servicosPrestadosItemImagem {
         width: 100%;
         object-fit:cover;
         border-radius: 15px;
-        box-sizing: border-box;
-        
-        
 
-    
    }
   main .contato {
     background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));

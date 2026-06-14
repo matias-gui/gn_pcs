@@ -5,15 +5,19 @@ const buttonFecharMenu = document.querySelector('.buttonFecharMenu');
 const homeButton = document.querySelector('.homeButton');
 const buttonLinkMenu = document.querySelectorAll('.buttonLinkMenu');
 
-
 buttonMenu.addEventListener('click', () => {
     navBar.style.clipPath = 'circle(160% at 100% 0%)';
-    navBar.style.transition = '1.2s all'
+    navBar.style.transition = '1.2s all';
+    carrosselServicosPrestados.style.opacity = '0';
+    carrosselServicosPrestados.style.transition = '1.2s all';
 })
 
 function fecharMenu(){
      navBar.style.clipPath = 'circle(0% at 100% 0%)';
-     navBar.style.transition = '1.2s all'
+     navBar.style.transition = '1.2s all';
+     carrosselServicosPrestados.style.opacity = '1';
+     carrosselServicosPrestados.style.transition = '1.2s all';
+    
 }
 buttonFecharMenu.addEventListener('click', fecharMenu);
 
@@ -33,14 +37,15 @@ const servicosPrestadosItemImagem = document.querySelectorAll('.servicosPrestado
 let index = 0;
 
 function carrossel(indice){
-    carrosselServicosPrestados.style.transform = `translateX(-${index * 100}%)`;
+    carrosselServicosPrestados.style.transform = `translateX(-${index * 110}%)`;
 }
 function next(){
     index ++;
-   if(index >= servicosPrestadosItemImagem.length){
+   if(index === servicosPrestadosItemImagem.length){
     index = 0;
    }
    carrossel();
 }
+console.log(servicosPrestadosItemImagem.length)
 
 setInterval(next, 4000)
