@@ -61,4 +61,3 @@ function anterior(){
 
 buttonProximo.addEventListener('click', proximo);
 buttonAnterior.addEventListener('click', anterior)
-setInterval(proximo, 4000)
