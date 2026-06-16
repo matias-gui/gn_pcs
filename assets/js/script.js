@@ -32,20 +32,33 @@ function abrirWhatsapp(){
 buttonWhats.addEventListener('click', abrirWhatsapp );
 homeButton.addEventListener('click',abrirWhatsapp );
  
+
+
 const carrosselServicosPrestados = document.querySelector('.carrosselServicosPrestados');
 const servicosPrestadosItemImagem = document.querySelectorAll('.servicosPrestadosItemImagem');
+const buttonProximo = document.querySelector('#proximo');
+const buttonAnterior = document.querySelector('#anterior');
 let index = 0;
 
-function carrossel(indice){
-    carrosselServicosPrestados.style.transform = `translateX(-${index * 110}%)`;
+function carrossel(){
+    carrosselServicosPrestados.style.transform = `translateX(-${index * 100}%)`
 }
-function next(){
-    index ++;
-   if(index === servicosPrestadosItemImagem.length){
-    index = 0;
-   }
-   carrossel();
-}
-console.log(servicosPrestadosItemImagem.length)
 
-setInterval(next, 4000)
+function proximo(){
+    index++;
+    if(index >= servicosPrestadosItemImagem.length ){
+        index = 0;
+    }
+    carrossel();
+}
+function anterior(){
+    index--;
+    if(index < 0){
+        index = servicosPrestadosItemImagem.length -1;
+    }
+    carrossel()
+}
+
+buttonProximo.addEventListener('click', proximo);
+buttonAnterior.addEventListener('click', anterior)
+setInterval(proximo, 4000)

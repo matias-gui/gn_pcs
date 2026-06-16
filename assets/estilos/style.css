@@ -20,8 +20,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
-  background-color: var(--color-secundaria);
-  color: var(--color-texto);
+  color: #fff;
 }
 
 /*Mobile first */
@@ -36,6 +35,7 @@ body {
     align-items: center;
     padding: 15px;
     background-color: var(--color-primaria);
+    z-index: 999;
   }
 
   .header .logoTitulo {
@@ -73,7 +73,8 @@ body {
     width: 20px;
     cursor: pointer;
   }
-  .header .buttonFecharMenu{
+
+  .header .buttonFecharMenu {
     position: absolute;
     left: 0;
     top: 0;
@@ -85,13 +86,13 @@ body {
     width: 10%;
     border: none;
     background-color: transparent;
-  
-   
+
+
   }
 
-  .header .buttonFecharMenu .imgFecharMenu{
+  .header .buttonFecharMenu .imgFecharMenu {
     width: 90%;
-    
+
   }
 
 
@@ -112,10 +113,11 @@ body {
     clip-path: circle(0% at 100% 0%);
     gap: 50px;
   }
-   .header .navBar .buttonLinkMenu {
+
+  .header .navBar .buttonLinkMenu {
     border: none;
     background-color: transparent;
-   }
+  }
 
   .header .navLink {
     display: flex;
@@ -130,11 +132,14 @@ body {
     font-size: 18px;
     z-index: 998;
   }
-  .header .navLink i{
+
+  .header .navLink i {
     color: var(--color-secundaria);
-    font-size:22px;
+    font-size: 22px;
   }
-  #iconeServico, #iconeContato{
+
+  #iconeServico,
+  #iconeContato {
     margin-left: 25px;
   }
 
@@ -153,6 +158,11 @@ body {
     padding: 20px;
     width: 100%;
     min-height: 100vh;
+  }
+
+  main hr {
+    width: 90%;
+    box-shadow: 2px 2px 5px #000;
   }
 
   main .home {
@@ -226,27 +236,29 @@ body {
   }
 
   main .sobre {
-    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url("/assets/imagens/ ") no-repeat center center/cover;
+    background-color: #fff;
+    color: #000;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 20px;
     line-height: 1.5;
-   
+
   }
 
   main .sobre .sobreTitulo {
     border-bottom: 1px solid var(--color-secundaria);
     border-right: 1px solid var(--color-secundaria);
-    border:1px solid var(--color-secundaria) ;
+    border: 1px solid var(--color-secundaria);
     border-left: none;
     padding-right: 15px;
     border-radius: 5px;
     font-size: 28px;
     margin-bottom: 20px;
   }
-  main span{
+
+  main span {
     color: var(--color-titulo);
 
   }
@@ -268,9 +280,9 @@ body {
   }
 
   main .servicos .servicosTitulo {
-     border-bottom: 1px solid var(--color-secundaria);
+    border-bottom: 1px solid var(--color-secundaria);
     border-right: 1px solid var(--color-secundaria);
-    border:1px solid var(--color-secundaria) ;
+    border: 1px solid var(--color-secundaria);
     border-left: none;
     border-radius: 5px;
     font-size: 28px;
@@ -285,7 +297,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-   
+
   }
 
   main .servicos .servicosLista .servicosItem {
@@ -300,55 +312,94 @@ body {
     border-radius: 5px;
     box-shadow: 3px 3px 5px #00000023;
   }
-  main .servicos .servicosLista .servicosItem:active{
+
+  main .servicos .servicosLista .servicosItem:active {
     transition: .6s all;
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(102, 179, 242, 0.151)
   }
-  main .servicos .servicosLista .servicosItem i{
+
+  main .servicos .servicosLista .servicosItem i {
     top: 10px;
-    color:var(--color-secundaria);
-    margin-right:10px;
-    font-size:20px;
-}
+    color: var(--color-secundaria);
+    margin-right: 10px;
+    font-size: 20px;
+  }
 
   main .servicos .servicosLista #diagnostico {
     grid-column: 1 / -1;
   }
 
   main .servicosPrestados {
-    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), url(/assets/imagens/pexels-mikhail-nilov-8108716.jpg) no-repeat center center/cover;
+    background-color: #fff;
+    color: var(--color-texto);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
     width: 100%;
     gap: 20px;
 
   }
+  main .servicosPrestados .buttonCarrossel{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top:  60%;
+    transform: translate(-50%, -70%);
+    width: 90%;
+  }
+  main .servicosPrestados button {
+    background-color:#00000056;
+    width: 45px ;
+    border: 1px solid var(--color-texto);
+    border-radius: 10px;
+    
+  }
+  main .servicosPrestados button i{
+    padding: 10px;
+    color: var(--color-texto);
+    font-weight: bold;
+  }
+
+
 
   main .servicosPrestados .servicosPrestadosTitulo {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
-
-  main .servicosPrestados .carrosselServicosPrestados  {
-        display:flex;
-        width: 70%;
-        gap: 70px;
-        transition: transform .7s ease-in-out;
+  main .servicosPrestados .carrossel {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .7s ease-in-out;
+    border-radius: 20px;
+    border: 1px solid #f6f6f6;
+    box-shadow: 2px 2px 5px #faf5f56a;
   }
-   main .servicosPrestados .carrosselServicosPrestados .servicosPrestadosItemImagem {
-        width: 100%;
-        object-fit:cover;
-        border-radius: 15px;
 
-   }
+  main .servicosPrestados .carrossel .carrosselServicosPrestados {
+    display: flex;
+    width: 100%;
+    transition: transform .7s ease-in-out;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    min-width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+  }
+
   main .contato {
-    background: linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,7 +433,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-  
+
   }
 
   main .contato .contatoLista li a img {
@@ -416,7 +467,7 @@ body {
   }
 
   footer {
-    background-color: #05182D;
+    background-color: #000;
     padding: 15px;
     text-align: center;
     font-size: 14px;
