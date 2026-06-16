@@ -24,7 +24,6 @@ body {
 }
 
 /*Mobile first */
-@media (max-width: 768px) {
   .header {
     position: fixed;
     top: 0;
@@ -472,8 +471,167 @@ body {
     text-align: center;
     font-size: 14px;
   }
-}
 
-.carrosselServicosPrestados img {
-  width: 100px;
+
+@media (min-width: 768px){
+  .header .buttonMenu .menuIcon {
+    width: 30px;
+  }
+  .header .buttonFecharMenu {
+    width: 8%;
+  }
+  .header .buttonFecharMenu .imgFecharMenu {
+    width: 90%;
+  }
+  .header .navLink i {
+    color: var(--color-secundaria);
+    font-size: 25px;
+  }
+
+  main .home .homeTitulo{
+    font-size: 48px;
+  }
+  main .home .homeButton, .homeDescricao  {
+    font-size: 17px;
+  }
+  main .home .buttonWhatsImg {
+     width: 50px;
+  }
+   main .sobre{
+    display: flex;
+   }
+  main .sobre .sobreTitulo, main .servicos .servicosTitulo  {
+    
+    font-size: 36px;
+  }
+  main .sobre .sobreDescricao {
+    align-self: center;
+    font-size: 17px;
+    width: 100vw;
+  }
+  main .servicos .servicosLista .servicosItem {
+    justify-content: space-evenly;
+    font-size: 17px;
+  }
+  main .servicos .servicosLista .servicosItem i {
+    font-size: 22px;
+  }
+
+  main .servicos .servicosLista #diagnostico {
+    height: 100px;
+  }
+  main .servicosPrestados .buttonCarrossel{
+    display: none;
+  }
+  main .servicosPrestados button {
+    background-color:#00000056;
+    width: 45px;
+    border: 1px solid var(--color-texto);
+    border-radius: 10px;
+    
+  }
+  main .servicosPrestados .servicosPrestadosTitulo {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  main .servicosPrestados .carrossel {
+    padding: 10px;
+    width: 100%;
+    height: 700px;
+    border: none;
+    box-shadow: none;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 50px;
+    width: 100%;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ffffff8c;
+
+  }
+
+  main .contato {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .contato .contatoTitulo {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoDescricao {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoLista {
+    list-style: none;
+    width: 100%;
+    text-align: justify;
+  }
+
+  main .contato .contatoLista li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  main .contato .contatoLista li a img {
+    width: 35px;
+  }
+
+  main .contato .contatoLista li a .email {
+    background-color: #ffffffac;
+    padding: 2px;
+    border-radius: 5px;
+    width: 25px;
+    margin-left: 2px;
+  }
+
+  main .contato .contatoLista #endereco {
+    font-size: 17px;
+  }
+
+  main .contato .horarioAtendimento {
+    font-size: 17;
+    width: 80%;
+    border: 1px solid var(--color-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    line-height: 1.5;
+  }
+
+  main .contato .horarioAtendimento h4 {
+    font-size:22px ;
+    color: #fff;
+    margin: 15px;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+
 }
