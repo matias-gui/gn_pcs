@@ -1,0 +1,829 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primaria: #132040fe;
+  --color-secundaria: #09305a;
+  --color-texto: #ffffff;
+  --color-titulo: #7ABDE6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/*Mobile first */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-primaria);
+    z-index: 999;
+  }
+
+  .header .logoTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header .logoTitulo .titulo path {
+    fill: rgba(255, 255, 255, 0.521);
+    stroke: #ffffff;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: desenhar 5s linear forwards;
+  }
+
+  @keyframes desenhar {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .header .logoTitulo .logo {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .header .buttonMenu {
+    background-color: transparent;
+    border: none;
+  }
+
+  .header .buttonMenu .menuIcon {
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .header .buttonFecharMenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    width: 10%;
+    border: none;
+    background-color: transparent;
+
+
+  }
+
+  .header .buttonFecharMenu .imgFecharMenu {
+    width: 90%;
+
+  }
+
+
+  .header .navBar {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    font-weight: 700;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #fbf6f6;
+    clip-path: circle(0% at 100% 0%);
+    gap: 50px;
+  }
+
+  .header .navBar .buttonLinkMenu {
+    border: none;
+    background-color: transparent;
+  }
+
+  .header .navLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    color: var(--color-primaria);
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+    z-index: 998;
+  }
+
+  .header .navLink i {
+    color: var(--color-secundaria);
+    font-size: 22px;
+  }
+
+  #iconeServico,
+  #iconeContato {
+    margin-left: 25px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  main hr {
+    width: 90%;
+    box-shadow: 2px 2px 5px #000;
+  }
+
+  main .home {
+    background:url("/assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center/cover, linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .home .homeTitulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.177);
+  }
+
+  main .home .homeDescricao {
+    line-height: 1.5;
+    font-size: 14px;
+    max-width: 600px;
+  }
+
+  main .home .homeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-primaria);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  main .home .buttonWhats {
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    object-fit: cover;
+    cursor: pointer;
+    width: 60px;
+  }
+
+  main .home .buttonWhatsImg {
+    animation: pulsar 1.9s infinite;
+
+    width: 40px;
+    background-color: #40C351;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  @keyframes pulsar {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 150, 0.7);
+    }
+
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 15px rgba(0, 255, 150, 0);
+    }
+
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 255, 150, 0);
+    }
+  }
+
+  main .sobre {
+    background-color: #fff;
+    color: #000;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    line-height: 1.5;
+
+  }
+
+  main .sobre .sobreTitulo {
+    border-bottom: 1px solid var(--color-secundaria);
+    border-right: 1px solid var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    border-left: none;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  main span {
+    color: var(--color-titulo);
+
+  }
+
+  main .sobre .sobreDescricao {
+    text-align: justify;
+    font-size: 14px;
+    max-width: 600px;
+  }
+
+  main .servicos {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    padding: 20px;
+    color: #000;
+  }
+
+  main .servicos .servicosTitulo {
+    border-bottom: 1px solid var(--color-secundaria);
+    border-right: 1px solid var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    border-left: none;
+    border-radius: 5px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 5px 15px 5px;
+  }
+
+  main .servicos .servicosLista {
+    width: 100%;
+    height: 450px;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+
+  }
+
+  main .servicos .servicosLista .servicosItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid var(--color-primaria);
+    display: flex;
+    margin: 12px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #00000023;
+  }
+
+  main .servicos .servicosLista .servicosItem:active {
+    transition: .6s all;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(102, 179, 242, 0.151)
+  }
+
+  main .servicos .servicosLista .servicosItem i {
+    top: 10px;
+    color: var(--color-secundaria);
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  main .servicos .servicosLista #diagnostico {
+    grid-column: 1 / -1;
+  }
+
+  main .servicosPrestados {
+    position: relative;
+    background:
+    radial-gradient(circle at top left,#2563eb55 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#06b6d455 0%,transparent 35%),
+    linear-gradient(160deg,#020617,#0f172a,#030712);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+
+  }
+  main .servicosPrestados .buttonCarrossel{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top:  60%;
+    transform: translate(-50%, -70%);
+    width: 90%;
+  }
+  main .servicosPrestados button {
+    background-color:#00000056;
+    width: 45px ;
+    border: 1px solid var(--color-texto);
+    border-radius: 10px;
+    
+  }
+  main .servicosPrestados button i{
+    padding: 10px;
+    color: var(--color-texto);
+    font-weight: bold;
+  }
+
+
+
+  main .servicosPrestados .servicosPrestadosTitulo {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  main .servicosPrestados .carrossel {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .7s ease-in-out;
+    border-radius: 20px;
+    border: 1px solid #f6f6f6;
+    box-shadow: 2px 2px 5px #faf5f56a;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados {
+    display: flex;
+    width: 100%;
+    transition: transform .7s ease-in-out;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    min-width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+  }
+
+  main .contato {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .contato .contatoTitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoDescricao {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoLista {
+    list-style: none;
+    width: 100%;
+    text-align: justify;
+  }
+
+  main .contato .contatoLista li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  main .contato .contatoLista li a img {
+    width: 30px;
+  }
+   main .contato .redesSocias{
+    margin-top: 10px;
+    padding: 10px;
+  }
+  main .contato .redesSocias h2{
+    font-size: 20px;
+  }
+   main .contato .redesSocias a img {
+    width: 30px;
+    margin: 10px;
+   }
+  main .contato .redesSocias a #insta{
+    width: 28px;
+  }
+ 
+
+  main .contato .contatoLista li a .email {
+    background-color: #ffffffac;
+    padding: 2px;
+    border-radius: 5px;
+    width: 25px;
+    margin-left: 2px;
+  }
+
+  main .contato .contatoLista #endereco {
+    font-size: 14px;
+  }
+
+  main .contato .horarioAtendimento {
+    width: 80%;
+    border: 1px solid var(--color-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    line-height: 1.5;
+  }
+
+  main .contato .horarioAtendimento h4 {
+    color: #fff;
+    margin: 15px;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+
+@media (min-width: 768px){
+  .header .buttonMenu .menuIcon {
+    width: 30px;
+  }
+  .header .buttonFecharMenu {
+    width: 8%;
+  }
+  .header .buttonFecharMenu .imgFecharMenu {
+    width: 90%;
+  }
+  .header .navLink i {
+    color: var(--color-secundaria);
+    font-size: 25px;
+  }
+
+  main .home .homeTitulo{
+    font-size: 48px;
+  }
+  main .home .homeButton, .homeDescricao  {
+    font-size: 17px;
+  }
+  main .home .buttonWhatsImg {
+     width: 50px;
+  }
+   main .sobre{
+    display: flex;
+   }
+  main .sobre .sobreTitulo, main .servicos .servicosTitulo  {
+    
+    font-size: 36px;
+  }
+  main .sobre .sobreDescricao {
+    align-self: center;
+    font-size: 17px;
+    width: 100vw;
+  }
+  main .servicos .servicosLista .servicosItem {
+    justify-content: space-evenly;
+    font-size: 17px;
+  }
+  main .servicos .servicosLista .servicosItem i {
+    font-size: 22px;
+  }
+
+  main .servicos .servicosLista #diagnostico {
+    height: 100px;
+  }
+  main .servicosPrestados .buttonCarrossel{
+    display: none;
+  }
+  main .servicosPrestados button {
+    background-color:#00000056;
+    width: 45px;
+    border: 1px solid var(--color-texto);
+    border-radius: 10px;
+    
+  }
+  main .servicosPrestados .servicosPrestadosTitulo {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  main .servicosPrestados .carrossel {
+    padding: 10px;
+    width: 100%;
+    height: 700px;
+    border: none;
+    box-shadow: none;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 50px;
+    width: 100%;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ffffff8c;
+
+  }
+
+  main .contato {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .contato .contatoTitulo {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoDescricao {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoLista {
+    list-style: none;
+    width: 100%;
+    text-align: justify;
+  }
+
+  main .contato .contatoLista li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  main .contato .contatoLista li a img {
+    width: 35px;
+  }
+
+  main .contato .contatoLista li a .email {
+    background-color: #ffffffac;
+    padding: 2px;
+    border-radius: 5px;
+    width: 25px;
+    margin-left: 2px;
+  }
+
+  main .contato .contatoLista #endereco {
+    font-size: 17px;
+  }
+
+  main .contato .horarioAtendimento {
+    font-size: 17;
+    width: 80%;
+    border: 1px solid var(--color-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    line-height: 1.5;
+  }
+
+  main .contato .horarioAtendimento h4 {
+    font-size:22px ;
+    color: #fff;
+    margin: 15px;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+
+}
+
+@media (min-width: 1024px){
+  .header .buttonMenu .menuIcon, .header .buttonFecharMenu, .imgFecharMenu, .header .navLink i {
+    display: none;
+  }
+  main .home .homeTitulo{
+    font-size: 48px;
+    
+  }
+  main .home .homeButton, main .home .homeDescricao  {
+    font-size: 18px;
+  }
+  main .home .buttonWhatsImg {
+     width: 50px;
+  }
+   main .sobre{
+    display: flex;
+   }
+  main .sobre .sobreTitulo, main .servicos .servicosTitulo  {
+    font-size: 42px;
+    margin-bottom: 55px;
+    border-top: none;
+    border-right: none;
+  }
+  main .sobre .sobreDescricao {
+    align-self: center;
+    font-size: 18px;
+    width: 100vw;
+  }
+  main .servicos .servicosLista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .servicos .servicosLista .servicosItem, main .servicos .servicosLista #diagnostico {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    box-shadow: 2px 2px 5px #1320404b;
+    border: 1px solid #13204025;
+    width: 200px;
+    height: 300px;
+    font-size: 18px;
+    transition: .6s ease-in-out   ;
+  }
+    main .servicos .servicosLista .servicosItem:hover {
+    transform: scale(1.1);
+    transition:.6s ease-in-out;
+    box-shadow: 0 0 15px rgba(102, 179, 242, 0.151)
+  }
+  main .servicos .servicosLista .servicosItem i {
+    font-size: 25px;
+  }
+  
+  main .servicosPrestados .buttonCarrossel{
+    display: none;
+  }
+  main .servicosPrestados .servicosPrestadosTitulo {
+    font-size: 36px;
+    position: relative;
+    z-index: 2;
+  }
+  main .servicosPrestados .carrossel {
+    width: 90%;
+    height: 700px;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 700px;
+   
+  }
+
+  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
+    object-fit: cover;
+    width: 250px;
+    min-width: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ffffff8c;
+      box-shadow: 2px 2px 5px #1320404b;
+    border: 1px solid #13204025;
+
+  }
+
+  main .contato {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  main .contato .contatoTitulo {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoDescricao {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  main .contato .contatoLista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    list-style: none;
+    width: 70%;
+    text-align: justify;
+  }
+
+  main .contato .contatoLista li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  main .contato .contatoLista li a img {
+    width: 35px;
+  }
+
+  main .contato .contatoLista li a .email {
+    background-color: #ffffffac;
+    padding: 2px;
+    border-radius: 5px;
+    width: 25px;
+    margin-left: 2px;
+  }
+
+  main .contato .contatoLista #endereco {
+    font-size: 17px;
+  }
+
+  main .contato .horarioAtendimento {
+    font-size: 17;
+    width: 80%;
+    border: 1px solid var(--color-primaria);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    line-height: 1.5;
+  }
+
+  main .contato .horarioAtendimento h4 {
+    font-size:22px ;
+    color: #fff;
+    margin: 15px;
+  }
+
+  footer {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+
+}
