@@ -690,7 +690,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 32px;
-    box-shadow: 2px 2px 5px #1320404b;
+    box-shadow: 3px 2px 5px #1320404b;
     border: 1px solid #13204025;
     width: 200px;
     height: 300px;
