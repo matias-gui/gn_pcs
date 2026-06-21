@@ -654,6 +654,23 @@ body {
 }
 
 @media (min-width: 1024px){
+  .header .navBar {
+    clip-path: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 80px;
+    background-color:transparent ;
+    
+  }
+  .header .navBar .navLink{
+    display: flex;
+    justify-content: none;
+    gap: 0;
+    width: 100px;
+    color: #fff;
+    margin-right: 10px;
+  }
   .header .buttonMenu .menuIcon, .header .buttonFecharMenu, .imgFecharMenu, .header .navLink i {
     display: none;
   }
