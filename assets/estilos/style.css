@@ -666,7 +666,7 @@ body {
   .header .navBar .navLink{
     display: flex;
     justify-content: none;
-    gap: 1px;
+    gap: 0;
     width: 100px;
     color: #fff;
     margin-right: 10px;
