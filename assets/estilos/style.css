@@ -165,7 +165,7 @@ body {
   }
 
   main .home {
-    background:url("./assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center/cover, linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5)), ;
+    background:url("/assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center/cover, linear-gradient(rgba(0, 0, 0, 0.407), rgba(0, 0, 0, 0.5));
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -654,11 +654,29 @@ body {
 }
 
 @media (min-width: 1024px){
+  .header .navBar {
+    clip-path: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 81px;
+    background-color:transparent ;
+    
+  }
+  .header .navBar .navLink{
+    display: flex;
+    justify-content: none;
+    gap: 0;
+    width: 100px;
+    color: #fff;
+    margin-right: 10px;
+  }
   .header .buttonMenu .menuIcon, .header .buttonFecharMenu, .imgFecharMenu, .header .navLink i {
     display: none;
   }
   main .home .homeTitulo{
     font-size: 48px;
+    
   }
   main .home .homeButton, main .home .homeDescricao  {
     font-size: 18px;
@@ -670,7 +688,10 @@ body {
     display: flex;
    }
   main .sobre .sobreTitulo, main .servicos .servicosTitulo  {
-    font-size: 36px;
+    font-size: 42px;
+    margin-bottom: 55px;
+    border-top: none;
+    border-right: none;
   }
   main .sobre .sobreDescricao {
     align-self: center;
@@ -685,8 +706,8 @@ body {
   main .servicos .servicosLista .servicosItem, main .servicos .servicosLista #diagnostico {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    box-shadow: 2px 2px 5px #1320404b;
+    gap: 32px;
+    box-shadow: 3px 2px 5px #1320404b;
     border: 1px solid #13204025;
     width: 200px;
     height: 300px;
