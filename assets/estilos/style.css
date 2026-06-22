@@ -166,7 +166,7 @@ body {
 
   main .home {
   
-    background:url("/assets/imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center;
+    background:url("../imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column; 
