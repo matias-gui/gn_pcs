@@ -5,6 +5,19 @@ const buttonFecharMenu = document.querySelector('.buttonFecharMenu');
 const homeButton = document.querySelector('.homeButton');
 const buttonLinkMenu = document.querySelectorAll('.buttonLinkMenu');
 
+window.addEventListener("load", () => {
+    const preloader = document.querySelector('.preloader');
+    setInterval(()=>{
+          preloader.classList.add("esconder");
+          preloader.addEventListener("transitionend", () => {
+            preloader.remove();
+        });
+    },800);
+
+})
+
+
+
 buttonMenu.addEventListener('click', () => {
     navBar.style.clipPath = 'circle(160% at 100% 0%)';
     navBar.style.transition = '1.2s all';

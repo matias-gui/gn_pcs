@@ -22,6 +22,83 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
 }
+.preloader{
+  position: fixed;
+  inset: 0;
+  background-color:#050B16 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  transition: opacity .9s ease;
+}
+.preloader.esconder{
+  opacity: 0;
+}
+.circular{
+  position: absolute;
+  border: 1px solid var(--color-titulo);
+  border-left: #050B16;
+  border-bottom: #000;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+   animation: girar 1.5s ease-out infinite;
+}
+#left{
+  width: 90px;
+  height: 90px;
+  animation: girarLeft 2s ease-in infinite;
+}
+.imgPreloader{
+  position: absolute;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow:
+0 0 20px rgba(0,132,255,.4),
+0 0 40px rgba(0,132,255,.25);
+}
+.texto{
+  position: absolute;
+  top: 60%;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.texto .ponto{
+ font-size: 20px;
+ opacity: .2;
+ animation: pontinho 1.5s infinite;
+}
+.ponto:nth-child(1){
+  animation-delay: .2s;
+}
+.ponto:nth-child(2){
+  animation-delay: .4s;
+}
+.ponto:nth-child(3){
+  animation-delay: .6s;
+}
+@keyframes pontinho {
+  0%,100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+
+@keyframes girarLeft {
+  to{
+    transform: rotate(-360deg);
+  }
+}
+@keyframes girar {
+  to{
+    transform: rotate(360deg);
+  }
+}
 
 /*Mobile first */
   .header {
