@@ -243,7 +243,7 @@ body {
 
   main .home {
   
-    background:url("../imagens/sam-tsonis-ozad4-l0cGY-unsplash.jpg") no-repeat center center;
+    background:url("../imagens/sam-tsonis-ozad4-l0cGY-unsplash.svg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column; 
@@ -284,6 +284,7 @@ body {
     object-fit: cover;
     cursor: pointer;
     width: 60px;
+    z-index: 999;
   }
 
   main .home .buttonWhatsImg {
