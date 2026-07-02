@@ -240,6 +240,10 @@ body {
     width: 90%;
     box-shadow: 2px 2px 5px #000;
   }
+  main section h2{
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+  }
 
   main .home {
   
@@ -337,7 +341,7 @@ body {
   }
 
   main span {
-    color: var(--color-titulo);
+    color:#0D6EFD;
 
   }
 
@@ -409,74 +413,70 @@ body {
   }
 
   main .servicosPrestados {
-    position: relative;
-    background:
-    radial-gradient(circle at top left,#2563eb55 0%,transparent 35%),
-    radial-gradient(circle at bottom right,#06b6d455 0%,transparent 35%),
-    linear-gradient(160deg,#020617,#0f172a,#030712);
-    color: var(--color-texto);
+    width: 100%;
+    overflow: hidden;
+    background: radial-gradient(
+    circle at center,
+    #0B1528 0%,
+    #08101D 40%,
+    #040811 100%);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  }
+   main .servicosPrestados p{
     text-align: center;
-    width: 100%;
-    gap: 20px;
-
-  }
-  main .servicosPrestados .buttonCarrossel{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    left: 50%;
-    top:  60%;
-    transform: translate(-50%, -70%);
-    width: 90%;
-  }
-  main .servicosPrestados button {
-    background-color:#00000056;
-    width: 45px ;
-    border: 1px solid var(--color-texto);
-    border-radius: 10px;
-    
-  }
-  main .servicosPrestados button i{
-    padding: 10px;
-    color: var(--color-texto);
-    font-weight: bold;
-  }
+    font-size: 14px;
+    margin: 10px;
+   }
+.servicosPrestadosContainer{
+  display: flex;
+  flex-direction: colomn;
+  width: 340px;
+  margin: 10px;
+  border: 1px solid #0a84ff75;
+  box-shadow:
+0 0 10px rgba(10, 132, 255, 0.175); 
 
 
-
-  main .servicosPrestados .servicosPrestadosTitulo {
-    font-size: 28px;
-    margin-bottom: 25px;
-  }
-
-  main .servicosPrestados .carrossel {
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: transform .7s ease-in-out;
-    border-radius: 20px;
-    border: 1px solid #f6f6f6;
-    box-shadow: 2px 2px 5px #faf5f56a;
-  }
-
-  main .servicosPrestados .carrossel .carrosselServicosPrestados {
-    display: flex;
-    width: 100%;
-    transition: transform .7s ease-in-out;
-  }
-
-  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
-    min-width: 100%;
-    height: 250px;
-    object-fit: cover;
-
-  }
+}
+.servicosPrestadosContainer .containerImg{
+  width: 50%;
+  margin: 25px 0  20px 20px;
+  
+}
+.servicosPrestadosContainer .containerTexto{
+  text-align: center;
+  padding: 10px;
+}
+.servicosPrestadosContainer .containerTexto button{
+  border: 1px solid var(--color-secundaria);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #0a84ffc8;
+}
+.servicosPrestadosContainer .containerTexto button:hover{
+  background-color: #0a84ff;
+  color: #fff;
+  transition: 1s all;
+}
+.servicosPrestadosContainer img{
+  width:100%;
+  object-fit: cover;
+}
+.servicosPrestadosContainer .tituloServico{
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--color-titulo);
+}
+.servicosPrestadosContainer .descricaoServico{
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-texto);
+}
 
   main .contato {
     background-color: #000;
@@ -616,41 +616,33 @@ body {
   main .servicos .servicosLista #diagnostico {
     height: 100px;
   }
-  main .servicosPrestados .buttonCarrossel{
-    display: none;
-  }
-  main .servicosPrestados button {
-    background-color:#00000056;
-    width: 45px;
-    border: 1px solid var(--color-texto);
-    border-radius: 10px;
-    
-  }
-  main .servicosPrestados .servicosPrestadosTitulo {
-    font-size: 36px;
-    margin-bottom: 25px;
-  }
-  main .servicosPrestados .carrossel {
-    padding: 10px;
+
+  main .servicosPrestados .container{
     width: 100%;
-    height: 700px;
-    border: none;
-    box-shadow: none;
-  }
-
-  main .servicosPrestados .carrossel .carrosselServicosPrestados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 50px;
-    width: 100%;
-  }
-
-  main .servicosPrestados .carrossel .carrosselServicosPrestados .servicosPrestadosItemImagem {
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px #ffffff8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
+   main .servicosPrestados p{
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+   }
+.servicosPrestadosContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+}
+.servicosPrestadosContainer .containerImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  
+}
 
   main .contato {
     background-color: #000;
