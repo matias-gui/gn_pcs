@@ -170,8 +170,6 @@ body {
     width: 90%;
 
   }
-
-
   .header .navBar {
     display: flex;
     justify-content: center;
@@ -194,7 +192,6 @@ body {
     border: none;
     background-color: transparent;
   }
-
   .header .navLink {
     display: flex;
     align-items: center;
@@ -329,17 +326,6 @@ body {
 
   }
 
-  main .sobre .sobreTitulo {
-    border-bottom: 1px solid var(--color-secundaria);
-    border-right: 1px solid var(--color-secundaria);
-    border: 1px solid var(--color-secundaria);
-    border-left: none;
-    padding-right: 15px;
-    border-radius: 5px;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
   main span {
     color:#0D6EFD;
 
@@ -361,15 +347,9 @@ body {
     color: #000;
   }
 
-  main .servicos .servicosTitulo {
-    border-bottom: 1px solid var(--color-secundaria);
-    border-right: 1px solid var(--color-secundaria);
-    border: 1px solid var(--color-secundaria);
-    border-left: none;
-    border-radius: 5px;
+  main .servicos .servicosTitulo ,  main .sobre .sobreTitulo{
     font-size: 28px;
     margin-bottom: 20px;
-    padding: 5px 15px 5px;
   }
 
   main .servicos .servicosLista {
@@ -595,15 +575,21 @@ body {
   }
    main .sobre{
     display: flex;
+    justify-content: center;
+    align-items: center;
    }
   main .sobre .sobreTitulo, main .servicos .servicosTitulo  {
-    
     font-size: 36px;
   }
   main .sobre .sobreDescricao {
     align-self: center;
     font-size: 17px;
     width: 100vw;
+  }
+  main .servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   main .servicos .servicosLista .servicosItem {
     justify-content: space-evenly;
