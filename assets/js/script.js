@@ -45,3 +45,28 @@ function abrirWhatsapp(){
 };
 buttonWhats.addEventListener('click', abrirWhatsapp );
 homeButton.addEventListener('click',abrirWhatsapp );
+
+const buttonVerDetalhes = document.querySelectorAll('.buttonOrcamento');
+const modal = document.querySelector('.modal');
+const modalFechar = document.querySelector('.modalFechar');
+ 
+function mostrarModal(){
+    modal.style.display = 'flex';
+}
+function fecharModal(){
+    modal.style.display = 'none';
+}
+modal.addEventListener('click', (e) => {
+    if(e.target === modal){
+        fecharModal();
+    };
+});
+
+modalFechar.addEventListener('click', fecharModal);
+
+buttonVerDetalhes.forEach( button => {
+    button.addEventListener('click', (e) => {
+        if( e.target.dataset.id === '1'){
+            mostrarModal()
+        } 
+    }); });
