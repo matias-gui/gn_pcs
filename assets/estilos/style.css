@@ -244,7 +244,7 @@ body {
 
   main .home {
   
-    background:url("../imagens/sam-tsonis-ozad4-l0cGY-unsplash.svg") no-repeat center center;
+    background:url("../imagens/nat-hwcMLF374mY-unsplash.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column; 
@@ -457,6 +457,52 @@ body {
   text-align: center;
   color: var(--color-texto);
 }
+ main .servicosPrestados .modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+ }
+  main .servicosPrestados .modal .modalConteudo{
+    position: relative;
+    width: 70%;
+    height: 60%;
+    background-color: #161515;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   main .servicosPrestados .modal .modalConteudo .modalFechar{
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    right: 10px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+   }
+   
+   main .servicosPrestados .modal .modalConteudo .modalFechar .imgFecharModal{
+    width: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #fff;
+   }
+   main .servicosPrestados .modal .modalConteudo .modalImg{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+   main .servicosPrestados .modal .modalConteudo .modalImg img{
+    width: 100px;
+    height: 100px;
+   }
 
   main .contato {
     background-color: #000;
@@ -563,6 +609,12 @@ body {
     color: var(--color-secundaria);
     font-size: 25px;
   }
+  main .home {
+  
+    background:url("../imagens/nat-hwcMLF374mY-unsplash\ \(1\).jpg") no-repeat center center;
+    background-size: cover;
+  }
+
 
   main .home .homeTitulo{
     font-size: 48px;
@@ -730,6 +782,11 @@ body {
   }
   .header .buttonMenu .menuIcon, .header .buttonFecharMenu, .imgFecharMenu, .header .navLink i {
     display: none;
+  }
+    main .home {
+  
+    background:url("../imagens/nat-hwcMLF374mY-unsplash\ \(2\).jpg") no-repeat center center;
+    background-size: cover;
   }
   main .home .homeTitulo{
     font-size: 48px;
