@@ -68,5 +68,26 @@ buttonVerDetalhes.forEach( button => {
     button.addEventListener('click', (e) => {
         if( e.target.dataset.id === '1'){
             mostrarModal()
+            modalLimpeza()
         } 
     }); });
+
+const modalImg = document.querySelector('.modalImg');
+const modalDescricao = document.querySelector('.modalDescricao');
+
+const imgsLimpeza = [
+    "assets/imagens/WhatsApp Image 2026-06-04 at 10.47.36.jpeg",
+    "assets/imagens/WhatsApp Image 2026-06-04 at 10.47.38.jpeg",
+    "assets/imagens/WhatsApp Image 2026-06-04 at 10.47.42.jpeg",
+    "assets/imagens/WhatsApp Image 2026-06-04 at 10.47.42.jpeg"
+]
+
+function modalLimpeza(){
+         imgsLimpeza.forEach( imgSrc => {
+          let img = document.createElement('img');
+          img.src = imgSrc;
+
+           modalImg.appendChild(img);
+    });
+   
+}
