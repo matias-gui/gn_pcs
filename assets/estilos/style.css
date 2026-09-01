@@ -669,7 +669,7 @@ body {
   }
 
   main .servicosPrestados .container{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,7 +677,7 @@ body {
   }
    main .servicosPrestados p{
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     margin: 10px;
    }
 .servicosPrestadosContainer{
@@ -693,7 +693,32 @@ body {
   align-items: center;
   margin: 10px;
   
-}
+}   
+   main .servicosPrestados .modal .modalConteudo .modalImg{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    padding: 10px;
+  }
+  .buttonOrcamento{
+    border: 1px solid var(--color-secundaria);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #0a84ffc8;
+    margin-top: 20px;
+   }
+   .buttonOrcamento:hover{
+    background-color: #0a84ff;
+    color: #fff;
+    transition: 1s all;
+  }
+   main .servicosPrestados .modal .modalConteudo .modalImg img{
+    width: 12vw;
+    height: 15vw;
+    margin-left: 30px;
+   }
 
   main .contato {
     background-color: #000;
